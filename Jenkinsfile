@@ -4,19 +4,19 @@ pipeline {
     stages {   
         stage('Master branch') { 
             steps { 
-               bat 'echo "This is master branch' 
+               sh 'echo "This is master branch' 
             }
         }
      
-        stage('Test') { 
+        stage('Build') { 
             steps { 
-               bat 'echo "Testing application..."'
+               sh 'echo "Building application..."'
             }
         }
 
         stage("Deploy application") { 
              steps { 
-                bat 'echo "Deploying application..."'
+                sh 'echo "Deploying application..."'
             }
         }  
     }
